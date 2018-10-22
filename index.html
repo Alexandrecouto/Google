@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
 <title>Goole</title>
-    <body onselectstart="return false" oncontextmenu="return false" ondragstart="return false" onMouseOver="window.status='..message perso .. '; return true;" >
+    
+    <script type="text/javascript" language="javascript">
+
+function noclick()
+	{
+	alert('Clic droit interdit');
+	return(false);
+	}
+document.oncontextmenu = noclick();
+// 
+</script>
+    
 <body>
 
 <img src="./Google.png" width = " 100% "  height = " 100% ">
